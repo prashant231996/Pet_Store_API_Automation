@@ -3,12 +3,13 @@ package api.endpoints;
 import static io.restassured.RestAssured.given;
 
 import api.payload.User;
+import api.utility.Routes;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 
 //Created for performing CRUD Operations, CREATE, READ, UPDATE, DELETE
-public class UserEndPoints {
+public class UserAPI {
 
 	
 	public static Response createUser(User userPayload)

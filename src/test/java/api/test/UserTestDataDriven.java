@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 import api.datprovider.TestDataDatProvider;
-import api.endpoints.UserEndPoints;
+import api.endpoints.UserAPI;
 import api.payload.User;
 import io.restassured.response.Response;
 
@@ -35,7 +35,7 @@ public class UserTestDataDriven {
 	  userPayload.setPassword(password);
 	  userPayload.setPhone(Phone);
 	  
-	  Response response= UserEndPoints.createUser(userPayload);
+	  Response response= UserAPI.createUser(userPayload);
 	  response.then().log().all();
 	  
 	  Assert.assertEquals(response.getStatusCode(), 200);

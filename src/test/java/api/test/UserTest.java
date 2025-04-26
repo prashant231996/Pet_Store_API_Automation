@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
-import api.endpoints.UserEndPoints;
+import api.endpoints.UserAPI;
 import api.payload.User;
 import io.restassured.response.Response;
 
@@ -34,7 +34,7 @@ public class UserTest {
 	@Test(priority=1)
 	public void testPostUser()
 	{
-	  Response response= UserEndPoints.createUser(userPayload);
+	  Response response= UserAPI.createUser(userPayload);
 	  response.then().log().all();
 	  
 	  Assert.assertEquals(response.getStatusCode(), 200);
@@ -44,7 +44,7 @@ public class UserTest {
 	@Test(priority=2)
 	public void testGetUser()
 	{
-		Response respones=UserEndPoints.getUser(this.userPayload.getUsername());
+		Response respones=UserAPI.getUser(this.userPayload.getUsername());
 		respones.then().log().all();
 		Assert.assertEquals(respones.getStatusCode(), 200);
 		
@@ -56,7 +56,7 @@ public class UserTest {
 		userPayload.setFirstName(faker.name().firstName());
 	    userPayload.setLastName(faker.name().lastName());
 	    userPayload.setEmail(faker.internet().safeEmailAddress());
-	  Response response= UserEndPoints.updateUser(this.userPayload.getUsername(), this.userPayload);
+	  Response response= UserAPI.updateUser(this.userPayload.getUsername(), this.userPayload);
 	  response.then().log().all();
 	  
 	  Assert.assertEquals(response.getStatusCode(), 200);
@@ -66,7 +66,7 @@ public class UserTest {
 	@Test(priority=4)
 	public void testDeleteUser()
 	{
-		Response respones=UserEndPoints.deleteUser(this.userPayload.getUsername());
+		Response respones=UserAPI.deleteUser(this.userPayload.getUsername());
 		respones.then().log().all();
 		Assert.assertEquals(respones.getStatusCode(), 200);
 		

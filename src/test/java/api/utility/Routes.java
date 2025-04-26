@@ -1,4 +1,4 @@
-package api.endpoints;
+package api.utility;
 
 public class Routes {
 	
@@ -11,5 +11,7 @@ public class Routes {
 	public static String update_url=base_url+"/user/{username}";
 	public static String delete_url=base_url+"/user/{username}";
 	
-
+   //PET Module
+	public static final String addPet="/pet";
+	
 }
