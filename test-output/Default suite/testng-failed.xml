@@ -6,6 +6,7 @@
       <class name="api.test.PetAPITest">
         <methods>
           <include name="setUp"/>
+          <include name="uploadPetImage"/>
           <include name="addPet"/>
         </methods>
       </class> <!-- api.test.PetAPITest -->

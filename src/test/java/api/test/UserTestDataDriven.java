@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
+import api.apiImplementation.UserAPI;
 import api.datprovider.TestDataDatProvider;
-import api.endpoints.UserAPI;
 import api.payload.User;
 import io.restassured.response.Response;
 

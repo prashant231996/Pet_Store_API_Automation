@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9810" started-at="2025-04-26T23:48:25 IST" finished-at="2025-04-26T23:48:35 IST">
+  <suite name="Default suite" duration-ms="18738" started-at="2025-04-27T23:15:23 IST" finished-at="2025-04-27T23:15:42 IST">
     <groups>
+      <group name="Regression">
+        <method signature="PetAPITest.addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" class="api.test.PetAPITest"/>
+        <method signature="PetAPITest.uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" class="api.test.PetAPITest"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="PetAPITest.addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" class="api.test.PetAPITest"/>
+        <method signature="PetAPITest.uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" class="api.test.PetAPITest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test name="Default test" duration-ms="9810" started-at="2025-04-26T23:48:25 IST" finished-at="2025-04-26T23:48:35 IST">
+    <test name="Default test" duration-ms="18738" started-at="2025-04-27T23:15:23 IST" finished-at="2025-04-27T23:15:42 IST">
       <class name="api.test.PetAPITest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:api.test.PetAPITest@80503]" name="setUp" is-config="true" duration-ms="23" started-at="2025-04-26T23:48:25 IST" finished-at="2025-04-26T23:48:25 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="setUp" is-config="true" duration-ms="27" started-at="2025-04-27T23:15:23 IST" finished-at="2025-04-27T23:15:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addPet()[pri:0, instance:api.test.PetAPITest@80503]" name="addPet" duration-ms="9676" started-at="2025-04-26T23:48:25 IST" finished-at="2025-04-26T23:48:35 IST">
+        <test-method status="PASS" signature="addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" duration-ms="9735" started-at="2025-04-27T23:15:23 IST" description="Adding new pet in pet store" finished-at="2025-04-27T23:15:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPet -->
+        <test-method status="PASS" signature="uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" duration-ms="8852" started-at="2025-04-27T23:15:33 IST" description="Upload pet image" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-04-27T23:15:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPetImage -->
       </class> <!-- api.test.PetAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

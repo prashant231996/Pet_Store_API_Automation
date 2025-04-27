@@ -1,5 +1,7 @@
 package api.test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,10 +10,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import api.endpoints.PetAPI;
+import api.apiImplementation.PetAPI;
 import api.payload.Category;
 import api.payload.Pet;
 import api.payload.Tag;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 public class PetAPITest {
 	
@@ -21,6 +25,7 @@ public class PetAPITest {
 	Tag tag=new Tag();
 	List<Tag> tags=new ArrayList<Tag>();
 	List<Object>photoUrls=new ArrayList<Object>();
+	static int petId;
 	
 	
 	@BeforeClass
@@ -40,11 +45,21 @@ public class PetAPITest {
 	}
 	
 	
-	@Test
-	public void addPet()
+	@Test(description="Adding new pet in pet store",priority=0,groups= {"Regression","Smoke"})
+	public void addPet() throws IOException
 	{
 		responseObj=PetAPI.addPet(petObj);
 		Assert.assertEquals(responseObj.getName(), petObj.getName());
+		petId=responseObj.getId();
+	}
+	
+	@Test(description="Upload pet image",priority=1,dependsOnMethods = "addPet",groups= {"Regression","Smoke"})
+	public void uploadPetImage() throws IOException
+	{
+		Response response=PetAPI.uploadPetImage(petId, new File("./testData/CAT_IMAGE.jpg"));
+		//Verifying response message contains uploaded image name
+		JsonPath jsonPath=new JsonPath(response.asString());
+		Assert.assertTrue(jsonPath.get("message").toString().contains("CAT_IMAGE.jpg"));
 	}
 
 }

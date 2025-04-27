@@ -8,19 +8,20 @@ import java.util.Properties;
 
 public class ReadProperty {
 	
-	static Properties prop=new Properties();
-	static ReadProperty readProperty;
+	static Properties prop;
+	static ReadProperty readProperty=null;
 	
 	private ReadProperty() throws IOException
 	{
-		File file=new File("./src/test/resource/config.properties");
+		File file=new File("./src/test/resources/config.properties");
 		FileInputStream fis=new FileInputStream(file);
+		prop=new Properties();
 		prop.load(fis);
 	}
 	
 	public static String getPropertDetails(String key) throws IOException
 	{
-		if(prop==null)
+		if(readProperty==null)
 		   readProperty=new ReadProperty();
 		return prop.getProperty(key); 
 	}
