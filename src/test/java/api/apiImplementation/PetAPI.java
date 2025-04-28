@@ -52,6 +52,22 @@ public class PetAPI {
 		return response;
 	}
 	
+	public static Pet getPetDetails(int petId) throws IOException
+	{
+		Response response=given()
+				.spec(SpecBuilder.getRequestSpecifications())
+				.pathParam("petId", petId)
+				.when()
+				.get(Routes.getPetDetails)
+				.then().spec(SpecBuilder.getResponseSpecifications())
+				.extract().response();
+		if(response.getStatusCode()!=200)
+		{
+			throw new RuntimeException(response.asString());
+		}
+		return response.as(Pet.class);
+	}
+	
 	
 	
 }

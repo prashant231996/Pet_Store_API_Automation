@@ -61,5 +61,12 @@ public class PetAPITest {
 		JsonPath jsonPath=new JsonPath(response.asString());
 		Assert.assertTrue(jsonPath.get("message").toString().contains("CAT_IMAGE.jpg"));
 	}
+	
+	@Test(description="Get pet details",priority=3,dependsOnMethods = "addPet", groups= {"Regression","Smoke"})
+	public void getPetDetails() throws IOException
+	{
+		 responseObj=PetAPI.getPetDetails(petId);
+		 Assert.assertEquals(responseObj.getName(), petObj.getName());
+	}
 
 }

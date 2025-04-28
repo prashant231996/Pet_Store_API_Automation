@@ -14,5 +14,6 @@ public class Routes {
    //PET Module
 	public static final String addPet="/pet";
 	public static final String uploadPetImage="/pet/{petId}/uploadImage";
+	public static final String getPetDetails="/pet/{petId}";
 	
 }
