@@ -4,11 +4,15 @@ import static io.restassured.RestAssured.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+
+import org.json.JSONObject;
 
 import api.payload.Pet;
 import api.utility.ReadProperty;
 import api.utility.Routes;
 import api.utility.SpecBuilder;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class PetAPI {
@@ -66,6 +70,35 @@ public class PetAPI {
 			throw new RuntimeException(response.asString());
 		}
 		return response.as(Pet.class);
+	}
+	
+	public static Pet updatePetDetails(Pet petObj) throws IOException
+	{
+		Response response=given().spec(SpecBuilder.getRequestSpecifications())
+				.body(petObj)
+				.when()
+				.put(Routes.updatePetDetails)
+				.then().extract().response();
+		if(response.getStatusCode()!=200)
+		{
+			throw new RuntimeException(response.asString());
+		}
+		return response.as(Pet.class);
+	}
+	
+	public static Response getPetByStatus(String status) throws IOException
+	{
+		Response response=given()
+				.spec(SpecBuilder.getRequestSpecifications())
+				.queryParam("status", status)
+				.when()
+				.get(Routes.findByStatus)
+				.then().extract().response();
+		if(response.getStatusCode()!=200)
+		{
+			throw new RuntimeException(response.asString());
+		}
+		return response;
 	}
 	
 	

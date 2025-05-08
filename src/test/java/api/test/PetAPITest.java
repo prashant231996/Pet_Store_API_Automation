@@ -4,11 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonObject;
 
 import api.apiImplementation.PetAPI;
 import api.payload.Category;
@@ -20,7 +24,7 @@ import io.restassured.response.Response;
 public class PetAPITest {
 	
     Pet petObj=new Pet();
-	Pet responseObj=new Pet();
+	Pet responsePetObj=new Pet();
 	Category category=new Category();
 	Tag tag=new Tag();
 	List<Tag> tags=new ArrayList<Tag>();
@@ -48,9 +52,9 @@ public class PetAPITest {
 	@Test(description="Adding new pet in pet store",priority=0,groups= {"Regression","Smoke"})
 	public void addPet() throws IOException
 	{
-		responseObj=PetAPI.addPet(petObj);
-		Assert.assertEquals(responseObj.getName(), petObj.getName());
-		petId=responseObj.getId();
+		responsePetObj=PetAPI.addPet(petObj);
+		Assert.assertEquals(responsePetObj.getName(), petObj.getName());
+		petId=responsePetObj.getId();
 	}
 	
 	@Test(description="Upload pet image",priority=1,dependsOnMethods = "addPet",groups= {"Regression","Smoke"})
@@ -62,11 +66,28 @@ public class PetAPITest {
 		Assert.assertTrue(jsonPath.get("message").toString().contains("CAT_IMAGE.jpg"));
 	}
 	
-	@Test(description="Get pet details",priority=3,dependsOnMethods = "addPet", groups= {"Regression","Smoke"})
+	@Test(description="Get pet details",priority=2,dependsOnMethods = "addPet", groups= {"Regression","Smoke"})
 	public void getPetDetails() throws IOException
 	{
-		 responseObj=PetAPI.getPetDetails(petId);
-		 Assert.assertEquals(responseObj.getName(), petObj.getName());
+		 Pet responsePetObj=PetAPI.getPetDetails(petId);
+		 Assert.assertEquals(responsePetObj.getName(), petObj.getName());
+	}
+	
+	@Test(description = "Update Pet details",priority=3,dependsOnMethods = "addPet", groups = {"Regression","Smoke","Sanity"})
+	public void updatePetDetails() throws IOException
+	{
+		responsePetObj.setName("Updated Pet Name");
+		responsePetObj=PetAPI.updatePetDetails(responsePetObj);
+		Assert.assertEquals(responsePetObj.getName(), "Updated Pet Name");	
+	}
+	
+	@Test(description="Get pet details by it's status",priority=4,dependsOnMethods = "addPet", groups= {"Regression","Smoke"})
+	public void getPetDetailsByStatus() throws IOException
+	{
+		Response response=PetAPI.getPetByStatus("available");
+		List<Object>responseList=response.as(List.class);
+		Map<String,Object>pet1=(Map<String,Object>)responseList.get(0);
+		Assert.assertEquals(pet1.get("status"), "available");
 	}
 
 }
