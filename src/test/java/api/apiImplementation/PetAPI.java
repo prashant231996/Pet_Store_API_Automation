@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.json.JSONObject;
@@ -12,6 +13,7 @@ import api.payload.Pet;
 import api.utility.ReadProperty;
 import api.utility.Routes;
 import api.utility.SpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -86,7 +88,7 @@ public class PetAPI {
 		return response.as(Pet.class);
 	}
 	
-	public static Response getPetByStatus(String status) throws IOException
+	public static List<Object> getPetByStatus(String status) throws IOException
 	{
 		Response response=given()
 				.spec(SpecBuilder.getRequestSpecifications())
@@ -98,7 +100,35 @@ public class PetAPI {
 		{
 			throw new RuntimeException(response.asString());
 		}
-		return response;
+		return response.as(List.class);
+	}
+	
+	public static Response updatePetDetailsByPetId(int petId,HashMap<String,Object>hmap) throws IOException
+	{
+		return given()
+				.baseUri(ReadProperty.getPropertDetails("baseUrl"))
+				.basePath(ReadProperty.getPropertDetails("basePath"))
+				.header("api_key", ReadProperty.getPropertDetails("apiKeyValue"))
+				.pathParam("petId", petId)
+				.formParams(hmap)
+				.contentType(ContentType.URLENC)
+				.when()
+				.post(Routes.updatePetDetailsByid)
+				.then()
+				.spec(SpecBuilder.getResponseSpecifications())
+				.extract().response();
+	}
+	
+	public static Response deletPet(int petId) throws IOException
+	{
+		return given()
+		.spec(SpecBuilder.getRequestSpecifications())
+		.pathParam("petId", petId)
+		.when()
+		.delete(Routes.deletePet)
+		.then()
+		.spec(SpecBuilder.getResponseSpecifications())
+		.extract().response();
 	}
 	
 	

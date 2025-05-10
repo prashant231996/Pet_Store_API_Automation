@@ -17,5 +17,7 @@ public class Routes {
 	public static final String getPetDetails="/pet/{petId}";
 	public static final String updatePetDetails="/pet";
 	public static final String findByStatus="/pet/findByStatus";
+	public static final String updatePetDetailsByid="/pet/{petId}";
+	public static final String deletePet="/pet/{petId}";
 	
 }
