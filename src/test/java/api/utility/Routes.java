@@ -20,4 +20,8 @@ public class Routes {
 	public static final String updatePetDetailsByid="/pet/{petId}";
 	public static final String deletePet="/pet/{petId}";
 	
+	//STORE Module
+	public static final String placePetOrder="/store/order";
+	public static final String getInventoryDetails="/store/inventory";
+	
 }

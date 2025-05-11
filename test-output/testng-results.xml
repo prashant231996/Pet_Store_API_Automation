@@ -1,65 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25499" started-at="2025-05-10T12:12:16 IST" finished-at="2025-05-10T12:12:41 IST">
+  <suite name="Default suite" duration-ms="11619" started-at="2025-05-11T19:37:22 IST" finished-at="2025-05-11T19:37:34 IST">
     <groups>
       <group name="Sanity">
-        <method signature="PetAPITest.updatePetDetails()[pri:3, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetails" class="api.test.PetAPITest"/>
+        <method signature="StoreAPITest.placePetOrder()[pri:0, instance:api.test.StoreAPITest@11438d26]" name="placePetOrder" class="api.test.StoreAPITest"/>
       </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="PetAPITest.addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.getPetDetails()[pri:2, instance:api.test.PetAPITest@30a3107a]" name="getPetDetails" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.getPetDetailsByStatus()[pri:4, instance:api.test.PetAPITest@30a3107a]" name="getPetDetailsByStatus" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.updatePetDetails()[pri:3, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetails" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.updatePetDetailsByPetId()[pri:5, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetailsByPetId" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" class="api.test.PetAPITest"/>
-      </group> <!-- Regression -->
-      <group name="Smoke">
-        <method signature="PetAPITest.addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.deletePetDetail()[pri:6, instance:api.test.PetAPITest@30a3107a]" name="deletePetDetail" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.getPetDetails()[pri:2, instance:api.test.PetAPITest@30a3107a]" name="getPetDetails" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.getPetDetailsByStatus()[pri:4, instance:api.test.PetAPITest@30a3107a]" name="getPetDetailsByStatus" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.updatePetDetails()[pri:3, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetails" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.updatePetDetailsByPetId()[pri:5, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetailsByPetId" class="api.test.PetAPITest"/>
-        <method signature="PetAPITest.uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" class="api.test.PetAPITest"/>
-      </group> <!-- Smoke -->
+      <group name="sanity">
+        <method signature="StoreAPITest.getInventoryDetails()[pri:1, instance:api.test.StoreAPITest@11438d26]" name="getInventoryDetails" class="api.test.StoreAPITest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="25499" started-at="2025-05-10T12:12:16 IST" finished-at="2025-05-10T12:12:41 IST">
-      <class name="api.test.PetAPITest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="setUp" is-config="true" duration-ms="27" started-at="2025-05-10T12:12:16 IST" finished-at="2025-05-10T12:12:16 IST">
+    <test name="Default test" duration-ms="11619" started-at="2025-05-11T19:37:22 IST" finished-at="2025-05-11T19:37:34 IST">
+      <class name="api.test.StoreAPITest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:api.test.StoreAPITest@11438d26]" name="setUp" is-config="true" duration-ms="32" started-at="2025-05-11T19:37:22 IST" finished-at="2025-05-11T19:37:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addPet()[pri:0, instance:api.test.PetAPITest@30a3107a]" name="addPet" duration-ms="10975" started-at="2025-05-10T12:12:16 IST" description="Adding new pet in pet store" finished-at="2025-05-10T12:12:27 IST">
+        <test-method status="PASS" signature="placePetOrder()[pri:0, instance:api.test.StoreAPITest@11438d26]" name="placePetOrder" duration-ms="9972" started-at="2025-05-11T19:37:22 IST" description="Place pet orders" finished-at="2025-05-11T19:37:32 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addPet -->
-        <test-method status="PASS" signature="uploadPetImage()[pri:1, instance:api.test.PetAPITest@30a3107a]" name="uploadPetImage" duration-ms="6771" started-at="2025-05-10T12:12:27 IST" description="Upload pet image" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:34 IST">
+        </test-method> <!-- placePetOrder -->
+        <test-method status="PASS" signature="getInventoryDetails()[pri:1, instance:api.test.StoreAPITest@11438d26]" name="getInventoryDetails" duration-ms="1479" started-at="2025-05-11T19:37:32 IST" description="Get Inventory details" finished-at="2025-05-11T19:37:34 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadPetImage -->
-        <test-method status="PASS" signature="getPetDetails()[pri:2, instance:api.test.PetAPITest@30a3107a]" name="getPetDetails" duration-ms="1482" started-at="2025-05-10T12:12:34 IST" description="Get pet details" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPetDetails -->
-        <test-method status="PASS" signature="updatePetDetails()[pri:3, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetails" duration-ms="1398" started-at="2025-05-10T12:12:35 IST" description="Update Pet details" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:37 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePetDetails -->
-        <test-method status="PASS" signature="getPetDetailsByStatus()[pri:4, instance:api.test.PetAPITest@30a3107a]" name="getPetDetailsByStatus" duration-ms="1728" started-at="2025-05-10T12:12:37 IST" description="Get pet details by it&#039;s status" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPetDetailsByStatus -->
-        <test-method status="PASS" signature="updatePetDetailsByPetId()[pri:5, instance:api.test.PetAPITest@30a3107a]" name="updatePetDetailsByPetId" duration-ms="1456" started-at="2025-05-10T12:12:38 IST" description="Update pet details by pet id" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePetDetailsByPetId -->
-        <test-method status="PASS" signature="deletePetDetail()[pri:6, instance:api.test.PetAPITest@30a3107a]" name="deletePetDetail" duration-ms="1496" started-at="2025-05-10T12:12:40 IST" description="Delete Pet Details" depends-on-methods="api.test.PetAPITest.addPet" finished-at="2025-05-10T12:12:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletePetDetail -->
-      </class> <!-- api.test.PetAPITest -->
+        </test-method> <!-- getInventoryDetails -->
+      </class> <!-- api.test.StoreAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
