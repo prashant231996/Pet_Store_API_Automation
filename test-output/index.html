@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\h\AppData\Local\Temp\testng-eclipse--640183872\testng-customsuite.xml</span>
+                    <span>C:\Users\h\AppData\Local\Temp\testng-eclipse--2078048574\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="deletePurchaseOrderById">deletePurchaseOrderById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="getInventoryDetails">getInventoryDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="placePetOrder">placePetOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="purchaseOrderById">purchaseOrderById</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,6 +142,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="deletePurchaseOrderById">
+                  </a> <!-- deletePurchaseOrderById -->
+                  <span class="method-name">deletePurchaseOrderById</span>
+                  <em>
+(delete purchase order by id)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="getInventoryDetails">
                   </a> <!-- getInventoryDetails -->
                   <span class="method-name">getInventoryDetails</span>
@@ -148,12 +167,21 @@
 (Place pet orders)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaseOrderById">
+                  </a> <!-- purchaseOrderById -->
+                  <span class="method-name">purchaseOrderById</span>
+                  <em>
+(Purchase order by id)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\h\AppData\Local\Temp\testng-eclipse--640183872\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\h\AppData\Local\Temp\testng-eclipse--2078048574\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -190,7 +218,15 @@
               <span class="test-group-name">Sanity</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">deletePurchaseOrderById</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">placePetOrder</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">purchaseOrderById</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -218,20 +254,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'placePetOrder')
 data.setCell(0, 2, 'api.test.StoreAPITest')
-data.setCell(0, 3, 9972);
+data.setCell(0, 3, 9690);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getInventoryDetails')
+data.setCell(1, 1, 'deletePurchaseOrderById')
 data.setCell(1, 2, 'api.test.StoreAPITest')
-data.setCell(1, 3, 1479);
+data.setCell(1, 3, 1614);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'getInventoryDetails')
+data.setCell(2, 2, 'api.test.StoreAPITest')
+data.setCell(2, 3, 1592);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'purchaseOrderById')
+data.setCell(3, 2, 'api.test.StoreAPITest')
+data.setCell(3, 3, 1513);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -264,11 +308,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">placePetOrder</span>
-                <span class="method-start">71 ms</span>
+                <span class="method-start">52 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getInventoryDetails</span>
-                <span class="method-start">10065 ms</span>
+                <span class="method-start">9763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">purchaseOrderById</span>
+                <span class="method-start">11360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletePurchaseOrderById</span>
+                <span class="method-start">12877 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

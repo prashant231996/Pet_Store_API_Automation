@@ -6,6 +6,7 @@
       <class name="api.test.StoreAPITest">
         <methods>
           <include name="placePetOrder"/>
+          <include name="deletePurchaseOrderById"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- api.test.StoreAPITest -->

@@ -23,5 +23,7 @@ public class Routes {
 	//STORE Module
 	public static final String placePetOrder="/store/order";
 	public static final String getInventoryDetails="/store/inventory";
+	public static final String purchaseOrderById="/store/order/{orderId}";
+	public static final String deletePurchaseOrderById="/store/order/{orderId}";
 	
 }

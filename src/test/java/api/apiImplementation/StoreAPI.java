@@ -39,5 +39,28 @@ public class StoreAPI {
 		JSONObject jsonObject=new JSONObject(response.asString());
 		return jsonObject;
 	}
+	
+	public static Response purchaseOrderById(int orderId) throws IOException
+	{
+		Response response=given()
+				.spec(SpecBuilder.getRequestSpecifications())
+				.pathParam("orderId", orderId)
+				.when()
+				.get(Routes.purchaseOrderById)
+				.then().spec(SpecBuilder.getResponseSpecifications())
+				.extract().response();
+		return response;
+	}
+	
+	public static Response deletePurchaseOrderById(int orderId) throws IOException
+	{
+		return  given()
+				.spec(SpecBuilder.getRequestSpecifications())
+				.pathParam("orderId", orderId)
+				.when()
+				.delete(Routes.deletePurchaseOrderById)
+				.then().spec(SpecBuilder.getResponseSpecifications())
+				.extract().response();
+	}
 
 }
