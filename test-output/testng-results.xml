@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14558" started-at="2025-05-12T22:53:48 IST" finished-at="2025-05-12T22:54:03 IST">
+  <suite name="Default suite" duration-ms="8854" started-at="2025-05-25T11:57:44 IST" finished-at="2025-05-25T11:57:53 IST">
     <groups>
-      <group name="Sanity">
-        <method signature="StoreAPITest.placePetOrder()[pri:0, instance:api.test.StoreAPITest@30a3107a]" name="placePetOrder" class="api.test.StoreAPITest"/>
-        <method signature="StoreAPITest.deletePurchaseOrderById()[pri:3, instance:api.test.StoreAPITest@30a3107a]" name="deletePurchaseOrderById" class="api.test.StoreAPITest"/>
-        <method signature="StoreAPITest.purchaseOrderById()[pri:2, instance:api.test.StoreAPITest@30a3107a]" name="purchaseOrderById" class="api.test.StoreAPITest"/>
-      </group> <!-- Sanity -->
-      <group name="sanity">
-        <method signature="StoreAPITest.getInventoryDetails()[pri:1, instance:api.test.StoreAPITest@30a3107a]" name="getInventoryDetails" class="api.test.StoreAPITest"/>
-      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="14558" started-at="2025-05-12T22:53:48 IST" finished-at="2025-05-12T22:54:03 IST">
-      <class name="api.test.StoreAPITest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:api.test.StoreAPITest@30a3107a]" name="setUp" is-config="true" duration-ms="24" started-at="2025-05-12T22:53:48 IST" finished-at="2025-05-12T22:53:49 IST">
+    <test name="Default test" duration-ms="8854" started-at="2025-05-25T11:57:44 IST" finished-at="2025-05-25T11:57:53 IST">
+      <class name="api.test.UserTest">
+        <test-method status="PASS" signature="setUpData()[pri:0, instance:api.test.UserTest@69a3d1d]" name="setUpData" is-config="true" duration-ms="787" started-at="2025-05-25T11:57:44 IST" finished-at="2025-05-25T11:57:45 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="placePetOrder()[pri:0, instance:api.test.StoreAPITest@30a3107a]" name="placePetOrder" duration-ms="9690" started-at="2025-05-12T22:53:49 IST" description="Place pet orders" finished-at="2025-05-12T22:53:58 IST">
+        </test-method> <!-- setUpData -->
+        <test-method status="PASS" signature="doUserLogout()[pri:8, instance:api.test.UserTest@69a3d1d]" name="doUserLogout" duration-ms="7964" started-at="2025-05-25T11:57:45 IST" description="Do user logout action" finished-at="2025-05-25T11:57:53 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- placePetOrder -->
-        <test-method status="PASS" signature="getInventoryDetails()[pri:1, instance:api.test.StoreAPITest@30a3107a]" name="getInventoryDetails" duration-ms="1592" started-at="2025-05-12T22:53:58 IST" description="Get Inventory details" finished-at="2025-05-12T22:54:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInventoryDetails -->
-        <test-method status="PASS" signature="purchaseOrderById()[pri:2, instance:api.test.StoreAPITest@30a3107a]" name="purchaseOrderById" duration-ms="1513" started-at="2025-05-12T22:54:00 IST" description="Purchase order by id" depends-on-methods="api.test.StoreAPITest.placePetOrder" finished-at="2025-05-12T22:54:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- purchaseOrderById -->
-        <test-method status="PASS" signature="deletePurchaseOrderById()[pri:3, instance:api.test.StoreAPITest@30a3107a]" name="deletePurchaseOrderById" duration-ms="1614" started-at="2025-05-12T22:54:01 IST" description="delete purchase order by id" depends-on-methods="api.test.StoreAPITest.placePetOrder" finished-at="2025-05-12T22:54:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletePurchaseOrderById -->
-      </class> <!-- api.test.StoreAPITest -->
+        </test-method> <!-- doUserLogout -->
+      </class> <!-- api.test.UserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

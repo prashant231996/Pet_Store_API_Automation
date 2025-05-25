@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\h\AppData\Local\Temp\testng-eclipse--2078048574\testng-customsuite.xml</span>
+                    <span>C:\Users\h\AppData\Local\Temp\testng-eclipse-276123137\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>2 groups</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,22 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="deletePurchaseOrderById">deletePurchaseOrderById</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="getInventoryDetails">getInventoryDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="placePetOrder">placePetOrder</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.StoreAPITest" hash-for-method="purchaseOrderById">purchaseOrderById</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="api.test.UserTest" hash-for-method="doUserLogout">doUserLogout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -137,43 +122,16 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">api.test.StoreAPITest</span>
+              <span class="class-name">api.test.UserTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deletePurchaseOrderById">
-                  </a> <!-- deletePurchaseOrderById -->
-                  <span class="method-name">deletePurchaseOrderById</span>
+                  <a name="doUserLogout">
+                  </a> <!-- doUserLogout -->
+                  <span class="method-name">doUserLogout</span>
                   <em>
-(delete purchase order by id)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getInventoryDetails">
-                  </a> <!-- getInventoryDetails -->
-                  <span class="method-name">getInventoryDetails</span>
-                  <em>
-(Get Inventory details)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="placePetOrder">
-                  </a> <!-- placePetOrder -->
-                  <span class="method-name">placePetOrder</span>
-                  <em>
-(Place pet orders)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="purchaseOrderById">
-                  </a> <!-- purchaseOrderById -->
-                  <span class="method-name">purchaseOrderById</span>
-                  <em>
-(Purchase order by id)                  </em>
+(Do user logout action)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -181,7 +139,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\h\AppData\Local\Temp\testng-eclipse--2078048574\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\h\AppData\Local\Temp\testng-eclipse-276123137\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -190,7 +148,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;api.test.StoreAPITest&quot;/&gt;
+      &lt;class name=&quot;api.test.UserTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;doUserLogout&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- api.test.UserTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -214,30 +176,6 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">Sanity</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">deletePurchaseOrderById</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">placePetOrder</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">purchaseOrderById</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">sanity</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">getInventoryDetails</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -254,28 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'placePetOrder')
-data.setCell(0, 2, 'api.test.StoreAPITest')
-data.setCell(0, 3, 9690);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deletePurchaseOrderById')
-data.setCell(1, 2, 'api.test.StoreAPITest')
-data.setCell(1, 3, 1614);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getInventoryDetails')
-data.setCell(2, 2, 'api.test.StoreAPITest')
-data.setCell(2, 3, 1592);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'purchaseOrderById')
-data.setCell(3, 2, 'api.test.StoreAPITest')
-data.setCell(3, 3, 1513);
+data.setCell(0, 1, 'doUserLogout')
+data.setCell(0, 2, 'api.test.UserTest')
+data.setCell(0, 3, 7964);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -290,9 +216,28 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">api.test.UserTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createUserWithArrayOfUserObj</span>
+                <br/>
+                <span class="ignored-method-name">createUserWithListOfUserObj</span>
+                <br/>
+                <span class="ignored-method-name">testDeleteUser</span>
+                <br/>
+                <span class="ignored-method-name">testGetUser</span>
+                <br/>
+                <span class="ignored-method-name">testUpdateUser</span>
+                <br/>
+                <span class="ignored-method-name">testPostUser</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserLoginIntoSyatem</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -301,26 +246,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">api.test.StoreAPITest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">api.test.UserTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUp</span>
+                <span class="method-name">setUpData</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">placePetOrder</span>
-                <span class="method-start">52 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">getInventoryDetails</span>
-                <span class="method-start">9763 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">purchaseOrderById</span>
-                <span class="method-start">11360 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">deletePurchaseOrderById</span>
-                <span class="method-start">12877 ms</span>
+                <span class="method-name">doUserLogout</span>
+                <span class="method-start">827 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

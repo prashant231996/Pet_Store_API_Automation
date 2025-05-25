@@ -10,6 +10,10 @@ public class Routes {
 	public static String get_url=base_url+"/user/{username}";
 	public static String update_url=base_url+"/user/{username}";
 	public static String delete_url=base_url+"/user/{username}";
+	public static final String createUserWithList="/user/createWithList";
+	public static final String createUserWithArray="/user/createWithArray";
+	public static final String loginUserIntoSystem="/user/login";
+	public static final String userLogout="/user/logout";
 	
    //PET Module
 	public static final String addPet="/pet";
